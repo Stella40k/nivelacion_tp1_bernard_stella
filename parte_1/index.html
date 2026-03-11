@@ -1,11 +1,47 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="parte_1/style.css" />
+    <title>Nivelacion</title>
+  </head>
+
+  <body class="body">
+    <h1>Primer Ejercicio</h1>
+    <div>
+      <input
+        id="caja1"
+        type="text"
+        name="caja"
+        size="40"
+        maxlength="150"
+        placeholder="Categoria"
+        class="caja"
+      />
+    </div>
+
+    <textarea
+      id="caja2"
+      name="comentarios"
+      rows="10"
+      cols="40"
+      placeholder="Dejanos tu opinion..."
+    ></textarea>
+
+    <div>
+      <button id="btn" type="button">Enviar</button>
+    </div>
+
+    <script>
+      const btn = document.getElementById("btn");
+
+      btn.addEventListener("click", () => {
+        const comentario1 = document.getElementById("caja1").value;
+        const comentario2 = document.getElementById("caja2").value;
+
+        btn.classList.toggle("btn-activo");
+        alert(`Categoria: ${comentario1}\nComentario: ${comentario2}`);
+      });
+    </script>
+  </body>
 </html>
